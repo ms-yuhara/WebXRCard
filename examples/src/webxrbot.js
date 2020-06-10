@@ -15,12 +15,26 @@ const attachmentMiddleware = () => next => card => {
     }
 };
 
+const store = createStore({}, ({ dispatch }) => next => action => {
+    if (action.type === 'DIRECT_LINE/CONNECT_FULFILLED') {
+        dispatch({
+            type: 'WEB_CHAT/SEND_EVENT',
+            payload: {
+                name: 'webchat/join',
+                value: { language: window.navigator.language }
+            }
+        });
+    }
+
+    return next(action);
+});
+
 const App = () =>
 
     <ReactWebChat
         attachmentMiddleware={attachmentMiddleware}
         directLine={createDirectLine({ token: 'YOUR_DIRECT_LINE_TOKEN' })}
-        store={createStore()}
+        store={store}
     />;
 
 render(<App />, document.getElementById('webchat'));
