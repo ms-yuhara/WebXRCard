@@ -1,6 +1,6 @@
 {
   "name": "@ms_yuhara/webxrcard",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The component for displaying 3D models using WebXR.",
   "main": "dist/index.js",
   "scripts": {
