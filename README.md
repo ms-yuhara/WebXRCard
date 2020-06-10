@@ -8,4 +8,4 @@ By incorporating this component into a bot created with [Bot Framework Composer]
 
 | AR                            | VR                           |
 | ----------------------------- | ---------------------------- |
-| ![Microsoft Edge](msedge.png) | ![Google Chrome](chrome.png) |
+| ![Microsoft Edge](https://github.com/ms-yuhara/WebXRCard/raw/master/msedge.png) | ![Google Chrome](https://github.com/ms-yuhara/WebXRCard/raw/master/chrome.png) |
