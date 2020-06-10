@@ -4,7 +4,7 @@ This is powered by [&lt;model-viewer&gt;](https://github.com/google/model-viewer
 The demo page is [HERE](https://ms-yuhara.github.io/WebXRCard/).
 
 
-By incorporating this component into a bot created with [Bot Framework Composer](https://docs.microsoft.com/en-us/composer/), you can easily respond to rich 3D models. The bot demo is [HERE](https://edgewatcher.azurewebsites.net/webxrbot.htm).
+By incorporating this component into a bot created with [Bot Framework Composer](https://docs.microsoft.com/en-us/composer/) and [Web Chat](https://github.com/microsoft/BotFramework-WebChat/), you can easily respond to rich 3D models. The bot demo is [HERE](https://edgewatcher.azurewebsites.net/webxrbot.htm).
 
 | AR                            | VR                           |
 | ----------------------------- | ---------------------------- |
