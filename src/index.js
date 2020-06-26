@@ -57,6 +57,10 @@ function prepareBabylonCanvas(id, src) {
         ]).then(function () {
             scene.createDefaultCamera(true, true, true);
 
+            // The default camera looks at the back of the asset
+            // Rotate the camera by 180 degrees to the front of the asset
+            scene.activeCamera.alpha += Math.PI;
+
             const env = scene.createDefaultEnvironment();
 
             // Here we add XR support
@@ -96,7 +100,7 @@ function prepareBabylonCanvas(id, src) {
 
 function WebXRCard(props) {
     if (props.mode == "ar") {
-        return <model-viewer {...props} auto-rotate camera-controls ar magic-leap></model-viewer>;
+        return <model-viewer {...props} auto-rotate autoplay camera-controls ar magic-leap></model-viewer>;
     } else if (props.mode == "vr") {
         const id = "renderCanvas-" + getUniqueStr();
         setTimeout(() => prepareBabylonCanvas(id, props.src), 1000);
