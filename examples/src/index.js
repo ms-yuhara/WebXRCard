@@ -24,12 +24,12 @@ const App = () =>
         <code>
             <span style={tagStyle}>&lt;WebXRCard</span>
             <span style={attrNameStyle}> mode=</span><b><span style={attrValueStyle}>"vr"</span></b>
-            <span style={attrNameStyle}> src=</span><span style={attrValueStyle}>"https://modelviewer.dev/shared-assets/models/Astronaut.glb"</span>
-            <span style={attrNameStyle}> alt=</span><span style={attrValueStyle}>"A 3D model of an astronaut"</span>
+            <span style={attrNameStyle}> src=</span><span style={attrValueStyle}>"https://edgewatcher.azurewebsites.net/kizunaai.glb"</span>
+            <span style={attrNameStyle}> alt=</span><span style={attrValueStyle}>"Kizuna AI"</span>
             <span style={tagStyle}>&gt;&lt;/WebXRCard&gt;</span>
         </code>
         <p></p>
-        <WebXRCard mode="vr" src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" alt="A 3D model of an astronaut"></WebXRCard>
+        <WebXRCard mode="vr" src="https://edgewatcher.azurewebsites.net/kizunaai.glb" alt="Kizuna AI"></WebXRCard>
     </div>;
 
 render(<App />, document.getElementById('root'));
