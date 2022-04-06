@@ -41,6 +41,8 @@ function prepareBabylonCanvas(id, src) {
 
     var canvas = document.getElementById(id);
 
+    if (canvas == null) { return; }
+
     var engine = null;
     var scene = null;
     var sceneToRender = null;
@@ -102,8 +104,12 @@ function WebXRCard(props) {
     if (props.mode == "ar") {
         return <model-viewer {...props} auto-rotate autoplay camera-controls ar magic-leap></model-viewer>;
     } else if (props.mode == "vr") {
-        const id = "renderCanvas-" + getUniqueStr();
-        setTimeout(() => prepareBabylonCanvas(id, props.src), 1000);
+        const [id, setID] = React.useState("renderCanvas-" + getUniqueStr());
+
+        if (document.getElementById(id) == null) {
+            setTimeout(() => prepareBabylonCanvas(id, props.src, props.mode), 1000);
+        }
+
         return <canvas id={id} className="renderCanvas" title={props.alt}></canvas>;
     }
 
